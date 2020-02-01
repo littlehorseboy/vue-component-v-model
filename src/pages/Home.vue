@@ -1,6 +1,10 @@
 <template>
   <div>
-    <Input inputValue="inputValue" />
+    <div>父組件 Home.vue 的 inputValue: {{ inputValue }}</div>
+
+    <hr>
+
+    <Input :inputValue="inputValue" :handleInputValue="handleInputValue" />
   </div>
 </template>
 
@@ -13,8 +17,13 @@ export default {
   },
   data() {
     return {
-      inputValue: '隨便給個值',
+      inputValue: 'test',
     };
+  },
+  methods: {
+    handleInputValue(event) {
+      this.inputValue = event.target.value;
+    },
   },
 };
 </script>
