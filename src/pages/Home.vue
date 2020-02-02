@@ -1,28 +1,34 @@
 <template>
   <div>
-    <div>父組件 Home.vue 的 inputValue: {{ inputValue }}</div>
+    <strong>父組件 Home.vue</strong>
+    <div>
+      inputValue:
+      <span style="border: 1px dotted">
+        {{ inputValue }}
+      </span>
+    </div>
 
     <hr>
 
-    <Input :inputValue="inputValue" :handleInputValue="handleInputValue" />
+    <InputTwo :inputValue="inputValue" @handleInputValue="handleInputValue" />
   </div>
 </template>
 
 <script>
-import Input from '@/components/Input.vue'
+import InputTwo from '@/components/InputTwo.vue';
 
 export default {
   components: {
-    Input,
+    InputTwo,
   },
   data() {
     return {
-      inputValue: 'test',
+      inputValue: '我是父組件的 data',
     };
   },
   methods: {
-    handleInputValue(event) {
-      this.inputValue = event.target.value;
+    handleInputValue(value) {
+      this.inputValue = value;
     },
   },
 };

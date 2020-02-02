@@ -1,9 +1,9 @@
 <template>
   <div>
     <div>
-      <strong>子組件 Input.vue</strong>
+      <strong>子組件 InputTwo.vue</strong>
       <br>
-      <input :value="inputValue" @input="handleInputValue($event.target.value)" />
+      <input :value="inputValue" @input="$emit('handleInputValue', $event.target.value)" />
     </div>
 
     <div>
@@ -20,9 +20,6 @@ export default {
   props: {
     inputValue: {
       type: String,
-    },
-    handleInputValue: {
-      type: Function,
     },
   },
 };
