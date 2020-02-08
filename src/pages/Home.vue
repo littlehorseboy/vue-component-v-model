@@ -10,26 +10,21 @@
 
     <hr>
 
-    <InputTwo :inputValue="inputValue" @handleInputValue="handleInputValue" />
+    <InputSeven v-model="inputValue" />
   </div>
 </template>
 
 <script>
-import InputTwo from '@/components/InputTwo.vue';
+import InputSeven from '@/components/InputSeven.vue';
 
 export default {
   components: {
-    InputTwo,
+    InputSeven,
   },
   data() {
     return {
       inputValue: '我是父組件的 data',
     };
-  },
-  methods: {
-    handleInputValue(value) {
-      this.inputValue = value;
-    },
   },
 };
 </script>

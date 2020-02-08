@@ -1,8 +1,17 @@
 <template>
   <div>
-    <input :value="inputValue" @input="$emit('update:inputValue', $event.target.value)" />
+    <div>
+      <strong>子組件 InputThree.vue</strong>
+      <br>
+      <input :value="inputValue" @input="$emit('update:inputValue', $event.target.value)" />
+    </div>
 
-    <div>子組件 Input.vue 的 inputValue: {{ inputValue }}</div>
+    <div>
+      props inputValue: 
+      <span style="border: 1px dotted">
+        {{ inputValue }}
+      </span>
+    </div>
   </div>
 </template>
 

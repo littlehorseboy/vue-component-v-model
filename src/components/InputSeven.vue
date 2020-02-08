@@ -1,8 +1,17 @@
 <template>
   <div>
-    <input v-model="model" />
+    <div>
+      <strong>子組件 InputSeven.vue</strong>
+      <br>
+      <input v-model="model" />
+    </div>
 
-    <div>子組件 Input.vue 的 inputValue: {{ model }}</div>
+    <div>
+      props value: 
+      <span style="border: 1px dotted">
+        {{ value }}
+      </span>
+    </div>
   </div>
 </template>
 
